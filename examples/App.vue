@@ -2,13 +2,28 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <x-input>
-    </x-input>
+    <x-affix>
+      <x-input v-model="item.name"
+               :label="'姓名'"
+               placeholder="请输入全" />
+    </x-affix>
+    <x-input v-model="item.sex"
+             :label="'性别'"
+             placeholder="" />
+    <x-input v-model="item.age"
+             :label="'年龄'" />
   </div>
 </template>
 <script>
 export default {
   name: 'app',
+  data () {
+    return {
+      item: {
+        name: ''
+      }
+    }
+  }
 }
 </script>
 
@@ -20,5 +35,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  height: 200vh;
 }
 </style>

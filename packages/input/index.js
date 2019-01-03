@@ -1,4 +1,4 @@
-import xInput from './xInput.vue'
+import xInput from './input.vue'
 // xInput = function (Vue) {
 // }
 xInput.install = function (Vue) {

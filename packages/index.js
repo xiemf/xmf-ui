@@ -1,13 +1,15 @@
-import xInput from './x-input'
-const components = [
-  xInput
-]
+import xInput from './input'
+import xAffix from './affix'
+// const components = [
+//   xInput
+// ]
 const install = function (Vue) {
   if (install.installed) return
   Vue.component('xInput', xInput)
-  components.forEach(component => {
-    Vue.component(component.name, component)
-  })
+  Vue.component('xAffix', xAffix)
+  // components.forEach(component => {
+  //   Vue.component(component.name, component)
+  // })
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
