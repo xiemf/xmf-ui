@@ -18,7 +18,7 @@ export default {
       default: ''
     },
     label: {
-      default: '项'
+      default: ''
     },
     placeholder: {
       default: ''
@@ -55,7 +55,7 @@ export default {
   border: 1px solid #ddd;
   padding: 0 10px;
   background-color: #fff;
-  margin-top: 6px;
+  margin-top: 8px;
   .input-label {
     position: absolute;
     left: 10px;

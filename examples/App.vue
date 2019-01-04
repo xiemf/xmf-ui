@@ -5,7 +5,7 @@
     <x-affix>
       <x-input v-model="item.name"
                :label="'姓名'"
-               placeholder="请输入全" />
+               placeholder="请输入英文名" />
     </x-affix>
     <x-input v-model="item.sex"
              :label="'性别'"
