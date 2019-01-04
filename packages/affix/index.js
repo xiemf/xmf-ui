@@ -1,7 +1,7 @@
-import xAffix from './affix.vue'
+import Affix from './affix.vue'
 // xInput = function (Vue) {
 // }
-xAffix.install = function (Vue) {
-  Vue.component(xAffix.name, xAffix)
+Affix.install = function (Vue) {
+  Vue.component(Affix.name, Affix)
 }
-export default xAffix
+export default Affix

@@ -45,6 +45,7 @@ function deepClone (vnodes, createElement) {
   return clonedVNodes
 }
 export default {
+  name: 'xAffix',
   render (h) {
     return h('div', [
       h('div',

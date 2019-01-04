@@ -12,6 +12,8 @@
              placeholder="" />
     <x-input v-model="item.age"
              :label="'年龄'" />
+    <x-avatar>谢</x-avatar>
+    <x-icon type="username"></x-icon>
   </div>
 </template>
 <script>

@@ -1,7 +1,5 @@
-import xInput from './input.vue'
-// xInput = function (Vue) {
-// }
-xInput.install = function (Vue) {
-  Vue.component(xInput.name, xInput)
+import Input from './input.vue'
+Input.install = function (Vue) {
+  Vue.component(Input.name, Input)
 }
-export default xInput
+export default Input
