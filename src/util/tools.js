@@ -3,7 +3,7 @@
  * @param {*} value 待验证的值
  * @param {*} validList 验证数组
  */
-export function oneOf(value, validList = []) {
+export function oneOf (value, validList = []) {
   for (let i = 0; i < validList.length; i++) {
     if (value === validList[i]) {
       return true

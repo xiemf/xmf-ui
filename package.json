@@ -1,6 +1,6 @@
 {
   "name": "xmf-ui",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "基于Vue的UI组件",
   "main": "lib/xmf-ui.umd.min.js",
   "private": false,
@@ -11,6 +11,7 @@
     "lib": "vue-cli-service build --target lib --name xmf-ui --dest lib packages/index.js"
   },
   "dependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "vue": "^2.5.21"

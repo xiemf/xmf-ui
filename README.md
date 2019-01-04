@@ -1,26 +1,40 @@
-# vue-x-ui
+# xmf-ui
 
-## Project setup
-```
-npm install
-```
+## Project use
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+npm install --save-dev xmf-ui
+import XmfUI from 'xmf-ui'
+import 'xmf-ui/lib/xmf-ui.css'
+Vue.use(XmfUI)
 ```
 
-### Run your tests
+## Components
+
+### Affix
+
 ```
-npm run test
+<x-affix></x-affix>
+在被包裹组件在视图中消失时浮出 适用于浮动Menu
 ```
 
-### Lints and fixes files
+### Icon
+
 ```
-npm run lint
+<x-icon><x-icon>
+图标组件 扩充ing
+```
+
+### Avatar
+
+```
+<x-avatar></avatar>
+头像组件 支持url x-icon defaultSlot
+```
+
+### Input
+
+```
+<x-input />
+输入框组件
 ```
