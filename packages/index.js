@@ -2,8 +2,11 @@ import Input from './input'
 import Affix from './affix'
 import Avatar from './avatar'
 import Icon from './icon'
+// import Select from './select'
+import Card from './card'
 const components = [
-  Input, Affix, Avatar, Icon
+  Input, Affix, Avatar, Icon, Card
+  // Select
 ]
 const install = function (Vue) {
   if (install.installed) return

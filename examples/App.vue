@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <input />
     <x-affix>
-      <x-input v-model="item.name" :label="'姓名'" suffix-icon="x-icon-xinxi1" placeholder="请输入英文名">
+      <x-input v-model="item.name" :label="'姓名'" suffix-icon="x-icon-originalimage" placeholder="请输入英文名">
       </x-input>
     </x-affix>
-    <x-input v-model="item.sex" prefix-icon="x-icon-xinxi1" placeholder="请输入中文"
-             :label="'性别'"/>
-    <x-input v-model="item.age"
-             :label="'年龄'" />
+    <x-input v-model="item.sex" prefix-icon="x-icon-originalimage" placeholder="请输入中文" :label="'性别'"/>
+    <x-input v-model="item.age" :label="'年龄'" />
+    <x-input></x-input>
     <x-avatar>谢</x-avatar>
     <x-icon type="username"></x-icon>
+    <x-card shadow="always" style="width:400px">
+      <span slot="header">hello1</span>
+      <p>hello,I'am a card</p>
+    </x-card>
   </div>
 </template>
 <script>

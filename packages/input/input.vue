@@ -2,7 +2,7 @@
   <div>
     <div class="x-input" :class="[isFocus? 'x-focus': '', inputSize ? `x-input--${inputSize}`:'']">
       <div @click="focus" v-if="!(prefixIcon)" class="input-label" :class="value || isFocus ? 'have-value' : 'no-value'"
-           style="transition:.5s;">{{value ? label : (placeholder ? placeholder : `${label}`) }}</div>
+           style="transition:.5s;">{{value ? label : (placeholder ? placeholder : `${label?label:''}`) }}</div>
       <i v-if="prefixIcon" :class="`iconfont ${prefixIcon}`" style="font-size:14px; color:#999;margin-right:2px" />
       <input ref="input" class="x-input--inner" :value="value" :placeholder="prefixIcon ? placeholder:''" :type="type" :maxlength="maxlength" :autocomplete="autocomplete" :name="name"
              :readonly="readonly" :max="max" :min="min" :step="step" :autofocus="autofocus" :form="form"
