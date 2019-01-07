@@ -28,7 +28,7 @@ Vue.use(XmfUI)
 ### Avatar
 
 ```
-<x-avatar></avatar>
+<x-avatar></x-avatar>
 头像组件 支持url x-icon defaultSlot
 ```
 
@@ -38,3 +38,7 @@ Vue.use(XmfUI)
 <x-input />
 输入框组件
 ```
+
+## link
+
+[GitHub](https://github.com/xiemf/xmf-ui)
