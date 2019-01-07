@@ -102,7 +102,7 @@ export default {
     flex-grow: 1;
     outline: none;
     border: none;
-    min-height: 30px;
+    min-height: 32px;
   }
 }
 </style>

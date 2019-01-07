@@ -25,12 +25,9 @@
     </div>
     <div>
       <x-tag size="mini" :closable="true" dot>mimi tag</x-tag>
-    </div>
-    <div>
       <x-tag :closable="true" dot>default tag</x-tag>
-    </div>
-    <div>
       <x-tag size="large" :closable="true"  type="primary">大标签</x-tag>
+
     </div>
   </div>
 </template>
