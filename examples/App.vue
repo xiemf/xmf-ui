@@ -29,6 +29,14 @@
       <x-tag size="large" :closable="true"  type="primary">大标签</x-tag>
 
     </div>
+    <div>
+      <x-tag >tag</x-tag>
+      <x-tag type="primary">tag</x-tag>
+      <x-tag type="success" dot>tag</x-tag>
+      <x-tag type="success" >tag</x-tag>
+      <x-tag type="warning" >tag</x-tag>
+      <x-tag type="error" >tag</x-tag>
+    </div>
   </div>
 </template>
 <script>

@@ -36,7 +36,7 @@ export default {
   display: inline-block;
   border: 1px solid @borderColor;
   border-radius: 4px;
-  min-width: 56px;
+  // min-width: 56px;
   height: @default;
   line-height: @default;
   white-space: nowrap;
@@ -73,6 +73,36 @@ export default {
       }
     }
   }
+  &--success {
+    color: #fff;
+    border: none;
+    background-color: @success;
+    &.x-tag-dot {
+      .x-tag-dot--inner {
+        background-color: @success !important;
+      }
+    }
+  }
+  &--warning {
+    color: #fff;
+    border: none;
+    background-color: @warning;
+    &.x-tag-dot {
+      .x-tag-dot--inner {
+        background-color: @warning !important;
+      }
+    }
+  }
+  &--error {
+    color: #fff;
+    border: none;
+    background-color: @error;
+    &.x-tag-dot {
+      .x-tag-dot--inner {
+        background-color: @error !important;
+      }
+    }
+  }
   .x-tag-text {
     vertical-align: middle;
   }
@@ -80,7 +110,7 @@ export default {
     border: 1px solid @borderColor !important;
     color: @textColor !important;
     background: #fff !important;
-    padding: 0 12px;
+    padding-right: 12px;
     .x-tag-dot--inner {
       display: inline-block;
       width: 12px;
