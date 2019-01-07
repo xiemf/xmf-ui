@@ -1,6 +1,6 @@
 
 <script>
-import { deepClone } from '../../src/util/tools.js'
+import { deepClone } from '../../src/utils/tools.js'
 function getScroll (target, top) {
   const prop = top ? 'pageYOffset' : 'pageXOffset'
   const method = top ? 'scrollTop' : 'scrollLeft'

@@ -4,8 +4,9 @@ import Avatar from './avatar'
 import Icon from './icon'
 // import Select from './select'
 import Card from './card'
+import Tag from './tag'
 const components = [
-  Input, Affix, Avatar, Icon, Card
+  Input, Affix, Avatar, Icon, Card, Tag
   // Select
 ]
 const install = function (Vue) {

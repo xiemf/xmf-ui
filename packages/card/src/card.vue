@@ -21,24 +21,31 @@ export default {
 }
 </script>
 <style lang="less">
+@import '../../index.less';
 .x-card {
   width: 100%;
-  border: 1px solid #ebeef5;
+  border: 1px solid @borderColor;
   text-align: left;
+  transition: box-shadow 0.5s;
   &__header {
     padding: 18px 20px;
+    border-bottom: 1px solid @borderColor;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bolder;
   }
   &__content {
     padding: 20px;
   }
-  .is-hover-shadow {
+  &.is-hover-shadow {
     &:hover {
       box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     }
   }
-  .is-never-shadow {
+  &.is-never-shadow {
   }
-  .is-always-shadow {
+  &.is-always-shadow {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   }
 }

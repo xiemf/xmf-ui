@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { oneOf } from '../../src/util/tools.js'
+import { oneOf } from '../../src/utils/tools.js'
 export default {
   name: 'xAvatar',
   props: {
