@@ -37,6 +37,13 @@
       <x-tag type="warning" >tag</x-tag>
       <x-tag type="error" >tag</x-tag>
     </div>
+    <div class="row-demo">
+      <x-row :gutter="12">
+        <x-col :span="6" :offset="12">1</x-col>
+        <x-col :span="3">123</x-col>
+        <x-col :span="6">123</x-col>
+      </x-row>
+    </div>
   </div>
 </template>
 <script>
@@ -71,5 +78,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.row-demo .x-col {
+  border: 1px solid #ddd;
 }
 </style>

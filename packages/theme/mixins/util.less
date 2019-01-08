@@ -1,0 +1,10 @@
+.utils-clearfix {
+  &::after,
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    clear: both;
+  }
+}

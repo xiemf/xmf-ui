@@ -1,6 +1,7 @@
 <script>
 export default {
   name: 'xRow',
+  componentName: 'X-Row',
   props: {
     tag: {
       type: String,
@@ -40,3 +41,16 @@ export default {
   }
 }
 </script>
+<style lang="less">
+@import '../../index.less';
+// @import '../../less/mixins/util.less';
+
+.x-row {
+  position: relative;
+  .utils-clearfix;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+</style>

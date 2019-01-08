@@ -1,0 +1,36 @@
+.x-focus {
+  color: @indexColor !important;
+  border-color: @indexColor !important;
+}
+.x-input {
+  min-width: 170px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  background-color: #fff;
+  margin-top: 8px;
+  color: #999;
+  .input-label {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    background: #fff;
+    font-size: 12px;
+  }
+  .have-value {
+    color: inherit;
+    transform: translateY(-50%);
+  }
+  .no-value {
+    color: #999;
+    line-height: 32px;
+  }
+  .x-input--inner {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    min-height: 32px;
+  }
+}
