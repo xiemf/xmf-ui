@@ -24,7 +24,7 @@
       </x-card>
     </div>
     <div>
-      <x-tag size="mini" :closable="true" dot>mimi tag</x-tag>
+      <x-tag size="mini" :closable="true" dot @close="handleClose">mimi tag</x-tag>
       <x-tag :closable="true" dot>default tag</x-tag>
       <x-tag size="large" :closable="true"  type="primary">大标签</x-tag>
 
@@ -50,7 +50,9 @@ export default {
     }
   },
   methods: {
-
+    handleClose (e) {
+      console.log(e)
+    }
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <span class="x-tag-dot--inner" v-if="typeof dot !== 'undefined'">
     </span>
     <span class="x-tag-text"><slot></slot></span>
-    <x-icon class="x-tag__close" type="close" v-if="closable" :size="12" @click.stop="handlerClick"></x-icon>
+    <x-icon class="x-tag__close" type="close" v-if="closable" :size="12" @click.native="handlerClick"></x-icon>
   </span>
 </template>
 <script>
