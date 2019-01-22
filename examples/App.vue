@@ -6,7 +6,11 @@
     </x-affix>
     <x-input v-model="item.sex" prefix-icon="x-icon-originalimage" placeholder="请输入中文" :label="'性别'"/>
     <x-input v-model="item.age" :label="'年龄'" />
-    <x-input></x-input>
+    <x-select :label="'性别'">
+      <x-option :value="123">1234</x-option>
+      <x-option :value="123">1234</x-option>
+      <x-option :value="123">1234</x-option>
+    </x-select>
     <x-avatar>谢</x-avatar>
     <x-icon type="username"></x-icon>
     <div class="x-card-box">

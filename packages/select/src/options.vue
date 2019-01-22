@@ -1,14 +1,14 @@
 <template>
   <li class="x-select-dropdown__item" @mouseenter="hoverItem" @click="selectOptionClick">
     <slot>
-      <span>{{currentLabel}}</span>
+      <span>{{label}}</span>
     </slot>
   </li>
 </template>
 <script>
 export default {
   name: 'xOption',
-  inject: ['select'],
+  // inject: ['select'],
   props: {
     value: {
       required: true
@@ -31,7 +31,13 @@ export default {
   },
   methods: {
     hoverItem () { },
-    selectOptionClick () { }
+    selectOptionClick () {
+      this.$emit('select', { value: this.value, label: this.label })
+    }
   }
 }
 </script>
+<style lang="less">
+.x-select-dropdown__item {
+}
+</style>
