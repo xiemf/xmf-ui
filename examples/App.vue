@@ -11,6 +11,9 @@
       <x-option :value="123">1234</x-option>
       <x-option :value="123">1234</x-option>
     </x-select>
+    <ul>
+      <li @click="liClick">123</li>
+    </ul>
     <x-avatar>谢</x-avatar>
     <x-icon type="username"></x-icon>
     <div class="x-card-box">
@@ -31,7 +34,6 @@
       <x-tag size="mini" :closable="true" dot @close="handleClose">mimi tag</x-tag>
       <x-tag :closable="true" dot>default tag</x-tag>
       <x-tag size="large" :closable="true"  type="primary">大标签</x-tag>
-
     </div>
     <div>
       <x-tag >tag</x-tag>
@@ -63,6 +65,9 @@ export default {
   methods: {
     handleClose (e) {
       console.log(e)
+    },
+    liClick () {
+      console.log(123)
     }
   }
 }

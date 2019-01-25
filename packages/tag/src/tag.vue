@@ -14,6 +14,7 @@ export default {
     type: {},
     dot: {
     },
+    name: {},
     closable: {
       default: false
     }

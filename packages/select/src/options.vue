@@ -1,14 +1,16 @@
 <template>
-  <li class="x-select-dropdown__item" @mouseenter="hoverItem" @click="selectOptionClick">
+  <li class="x-select-dropdown__item" @mouseover="hoverItem" @click.stop.native="selectOptionClick">
     <slot>
       <span>{{label}}</span>
     </slot>
   </li>
 </template>
 <script>
+// import Emitter from '../../../src/mixins/emitter.js'
 export default {
   name: 'xOption',
-  // inject: ['select'],
+  inject: ['select'],
+  // mixins: [Emitter],
   props: {
     value: {
       required: true
@@ -30,14 +32,23 @@ export default {
     }
   },
   methods: {
-    hoverItem () { },
+    hoverItem () {
+      console.log('hover')
+    },
     selectOptionClick () {
-      this.$emit('select', { value: this.value, label: this.label })
+      console.log('click')
+      // this.dispatch('xSelect', 'handleOptionClick', [this, true])
     }
   }
 }
 </script>
 <style lang="less">
 .x-select-dropdown__item {
+  cursor: pointer;
+  width: 100%;
+  padding: 4px 16px;
+  &:hover {
+    background: #ddd;
+  }
 }
 </style>
