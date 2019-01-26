@@ -43,12 +43,17 @@
       <x-tag type="warning" >tag</x-tag>
       <x-tag type="error" >tag</x-tag>
     </div>
-    <div class="row-demo">
+    <!-- <div class="row-demo">
       <x-row :gutter="12">
         <x-col :span="6" :offset="12">1</x-col>
         <x-col :span="3">123</x-col>
         <x-col :span="6">123</x-col>
       </x-row>
+    </div> -->
+    <div style="height:80px; vertical-align: middle;">
+      <div class="test1"></div>
+      <div class="test2">1</div>
+      <div class="test3">2</div>
     </div>
   </div>
 </template>
@@ -91,4 +96,58 @@ export default {
 .row-demo .x-col {
   border: 1px solid #ddd;
 }
+</style>
+<style lang="less" scoped>
+.tag-test{
+  display: inline-flex;
+  width: 80px;
+  height: 32px;
+  border:1px solid #ddd;
+  font-size: 14px;
+  &::after{
+    font-size: 0;
+    content: '';
+    height: 100%;
+  }
+  .tag-dot{
+    display: inline-block;
+    border:1px solid #ddd;
+    vertical-align: middle;
+    .dot{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #ddd;
+    }
+  }
+  .tag-text{
+    border:1px solid #ddd;
+    display: inline-block;
+  }
+  .tag-close{
+    border:1px solid #ddd;
+    display: inline-block;
+  }
+
+}
+  .test1{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+  }
+  .test2{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 40px;
+    border: 1px solid #ddd;
+  }
+  .test3{
+    display: inline-block;
+    width: 20px;
+    height: 80px;
+    border: 1px solid #ddd;
+  }
 </style>

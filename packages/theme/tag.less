@@ -11,7 +11,7 @@
   color: @textColor;
   padding: 0 8px;
   font-size: 14px;
-  .utils-clearfix;
+  // .utils-clearfix;
   + .x-tag {
     margin-left: 8px;
   }
@@ -80,14 +80,18 @@
     color: @textColor !important;
     background: #fff !important;
     padding-right: 12px;
-    .utils-clearfix;
+    // .utils-clearfix;
     .x-tag-dot--inner {
       display: inline-block;
       width: 12px;
       height: 12px;
+      vertical-align: middle;
       border-radius: 12px;
       margin-right: 8px;
       background-color: @borderColor;
     }
+  }
+  .x-tag__close{
+    vertical-align: middle;
   }
 }
