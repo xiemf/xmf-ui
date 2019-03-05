@@ -1,16 +1,16 @@
 <template>
-  <li class="x-select-dropdown__item" @mouseover="hoverItem" @click.stop.native="selectOptionClick">
+  <li class="x-select-dropdown__item" @click.prevent="selectOptionClick">
     <slot>
-      <span>{{label}}</span>
+      <span>{{label}} {{selectValue}}</span>
     </slot>
   </li>
 </template>
 <script>
-// import Emitter from '../../../src/mixins/emitter.js'
+import Emitter from '../../../src/mixins/emitter.js'
 export default {
   name: 'xOption',
   inject: ['select'],
-  // mixins: [Emitter],
+  mixins: [Emitter],
   props: {
     value: {
       required: true
@@ -20,6 +20,11 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    selectValue () {
+      return this.select.value
     }
   },
   data () {
@@ -32,13 +37,17 @@ export default {
     }
   },
   methods: {
-    hoverItem () {
-      console.log('hover')
-    },
     selectOptionClick () {
-      console.log('click')
-      // this.dispatch('xSelect', 'handleOptionClick', [this, true])
+      this.dispatch('xSelect', 'handleOptionClick', [this, true])
+    },
+    handleValueChange () {
+      console.log(this.select.value)
     }
+  },
+  watch: {
+
+  },
+  created () {
   }
 }
 </script>

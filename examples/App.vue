@@ -6,14 +6,19 @@
     </x-affix>
     <x-input v-model="item.sex" prefix-icon="x-icon-originalimage" placeholder="请输入中文" :label="'性别'"/>
     <x-input v-model="item.age" :label="'年龄'" />
-    <x-select :label="'性别'">
-      <x-option :value="123">1234</x-option>
-      <x-option :value="123">1234</x-option>
-      <x-option :value="123">1234</x-option>
+    <x-select :label="'性别'" v-model="item.sex">
+      <x-option :value="1">男</x-option>
+      <x-option :value="2">女</x-option>
+      <x-option :value="3">保密</x-option>
     </x-select>
-    <ul>
+    <x-select :label="'性别'" v-model="item.age">
+      <x-option value="1">成年</x-option>
+      <x-option value="2">未成年</x-option>
+      <x-option value="3">保密</x-option>
+    </x-select>
+    <!-- <ul>
       <li @click="liClick">123</li>
-    </ul>
+    </ul> -->
     <x-avatar>谢</x-avatar>
     <x-icon type="username"></x-icon>
     <div class="x-card-box">
@@ -50,11 +55,6 @@
         <x-col :span="6">123</x-col>
       </x-row>
     </div> -->
-    <div style="height:80px; vertical-align: middle;">
-      <div class="test1"></div>
-      <div class="test2">1</div>
-      <div class="test3">2</div>
-    </div>
   </div>
 </template>
 <script>
@@ -63,7 +63,8 @@ export default {
   data () {
     return {
       item: {
-        name: ''
+        name: '',
+        sex: ''
       }
     }
   },
