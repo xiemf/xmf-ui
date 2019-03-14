@@ -6,7 +6,7 @@
     </x-affix>
     <x-input v-model="item.sex" prefix-icon="x-icon-originalimage" placeholder="请输入中文" :label="'性别'"/>
     <x-input v-model="item.age" :label="'年龄'" />
-    <x-select :label="'性别'" v-model="item.sex">
+    <!-- <x-select :label="'性别'" v-model="item.sex">
       <x-option :value="1">男</x-option>
       <x-option :value="2">女</x-option>
       <x-option :value="3">保密</x-option>
@@ -15,12 +15,12 @@
       <x-option value="1">成年</x-option>
       <x-option value="2">未成年</x-option>
       <x-option value="3">保密</x-option>
-    </x-select>
+    </x-select> -->
     <!-- <ul>
       <li @click="liClick">123</li>
     </ul> -->
     <x-avatar>谢</x-avatar>
-    <x-icon type="username"></x-icon>
+    <cip-icon type="username"></cip-icon>
     <div class="x-card-box">
       <x-card shadow="always" style="width:30%">
         <span slot="header">hello</span>
@@ -55,6 +55,18 @@
         <x-col :span="6">123</x-col>
       </x-row>
     </div> -->
+    <cip-menu  theme="dark"  :active-key="act" @on-select="select">
+      <cip-sub-menu name="3" key="3">
+        <span slot="title">123</span>
+        <cip-menu-item name="3-1" key="3-1">1</cip-menu-item>
+        <cip-menu-item name="3-2" key="3-2">222</cip-menu-item>
+        <cip-menu-item name="3-3" key="3-3">33333</cip-menu-item>
+        <cip-menu-item name="3-4" key="3-4">4444444</cip-menu-item>
+      </cip-sub-menu >
+      <cip-menu-item name="1" key="1">1</cip-menu-item>
+      <cip-menu-item name="2" key="2">2</cip-menu-item>
+      <cip-menu-item name="4" key="4">4</cip-menu-item>
+    </cip-menu>
   </div>
 </template>
 <script>
@@ -65,7 +77,8 @@ export default {
       item: {
         name: '',
         sex: ''
-      }
+      },
+      act: '1'
     }
   },
   methods: {
@@ -74,6 +87,10 @@ export default {
     },
     liClick () {
       console.log(123)
+    },
+    select (key) {
+      this.act = key
+      console.log(key)
     }
   }
 }
@@ -88,6 +105,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   height: 200vh;
+  background: #ddd;
 }
 .x-card-box {
   display: flex;

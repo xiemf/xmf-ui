@@ -2,15 +2,19 @@ import Input from './input'
 import Affix from './affix'
 import Avatar from './avatar'
 import Icon from './icon'
-import Select from './select'
-import Option from './option'
+// import Select from './select'
+// import Option from './option'
 import Card from './card'
 import Tag from './tag'
 import Col from './col'
 import Row from './row'
+import Menu from './menu'
+import MenuGroup from './menu-group'
+import MenuItem from './menu-item'
+import SubMenu from './sub-menu'
 const components = [
   Input, Affix, Avatar, Icon, Card, Tag, Col, Row,
-  Select, Option
+  Menu, MenuGroup, MenuItem, SubMenu
 ]
 const install = function (Vue) {
   if (install.installed) return
@@ -24,6 +28,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  install,
-  Input
+  install
 }

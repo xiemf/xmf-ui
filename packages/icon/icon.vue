@@ -1,34 +1,52 @@
 <template>
-  <i :class="`iconfont x-icon-${type}`"
-     :style="styles"></i>
+    <i :class="classes" :style="styles" @click="handleClick"></i>
+
 </template>
 <script>
+const prefixCls = 'cip-icon'
+
 export default {
-  name: 'xIcon',
+  name: 'CipIcon',
   props: {
     type: {
       type: String,
-      required: true
+      default: ''
     },
-    color: {
+    size: [Number, String],
+    color: String,
+    custom: {
       type: String,
-      default: '#5c6b77'
-    },
-    size: {
-      type: Number,
-      default: 16
+      default: ''
     }
   },
   computed: {
+    classes () {
+      return [
+        `${prefixCls}`,
+        {
+          [`${prefixCls}-${this.type}`]: this.type !== '',
+          [`${this.custom}`]: this.custom !== ''
+        }
+      ]
+    },
     styles () {
-      return {
-        fontSize: `${this.size}px`,
-        color: this.color
+      let style = {}
+
+      if (this.size) {
+        style['font-size'] = `${this.size}px`
       }
+
+      if (this.color) {
+        style.color = this.color
+      }
+
+      return style
+    }
+  },
+  methods: {
+    handleClick (event) {
+      this.$emit('click', event)
     }
   }
 }
 </script>
-<style lang="less">
-@import '../assets/icon/iconfont.css';
-</style>

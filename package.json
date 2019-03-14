@@ -11,7 +11,7 @@
     "lib": "vue-cli-service build --target lib --name xmf-ui --dest lib packages/index.js"
   },
   "dependencies": {
-   
+    "popper.js": "^1.14.7"
   },
   "peerDependencies": {
     "vue": "^2.5.21"
