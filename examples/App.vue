@@ -6,19 +6,6 @@
     </x-affix>
     <x-input v-model="item.sex" prefix-icon="x-icon-originalimage" placeholder="请输入中文" :label="'性别'"/>
     <x-input v-model="item.age" :label="'年龄'" />
-    <!-- <x-select :label="'性别'" v-model="item.sex">
-      <x-option :value="1">男</x-option>
-      <x-option :value="2">女</x-option>
-      <x-option :value="3">保密</x-option>
-    </x-select>
-    <x-select :label="'性别'" v-model="item.age">
-      <x-option value="1">成年</x-option>
-      <x-option value="2">未成年</x-option>
-      <x-option value="3">保密</x-option>
-    </x-select> -->
-    <!-- <ul>
-      <li @click="liClick">123</li>
-    </ul> -->
     <x-avatar>谢</x-avatar>
     <cip-icon type="username"></cip-icon>
     <div class="x-card-box">
@@ -55,18 +42,33 @@
         <x-col :span="6">123</x-col>
       </x-row>
     </div> -->
-    <cip-menu  theme="dark"  :active-key="act" @on-select="select">
+
+    <cip-menu ref="menu" theme="dark"  :active-name="item.sex" :open-names="openNames" @on-select="select">
       <cip-sub-menu name="3" key="3">
         <span slot="title">123</span>
-        <cip-menu-item name="3-1" key="3-1">1</cip-menu-item>
-        <cip-menu-item name="3-2" key="3-2">222</cip-menu-item>
-        <cip-menu-item name="3-3" key="3-3">33333</cip-menu-item>
-        <cip-menu-item name="3-4" key="3-4">4444444</cip-menu-item>
+        <cip-menu-item name="3-111" key="3-1">1</cip-menu-item>
+        <cip-menu-item name="3-211" key="3-2">222</cip-menu-item>
+        <cip-menu-item name="3-311" key="3-3">33333</cip-menu-item>
+        <cip-menu-item name="3-411" key="3-4">4444444</cip-menu-item>
       </cip-sub-menu >
       <cip-menu-item name="1" key="1">1</cip-menu-item>
       <cip-menu-item name="2" key="2">2</cip-menu-item>
       <cip-menu-item name="4" key="4">4</cip-menu-item>
     </cip-menu>
+    <button @click="changeOpenNames">change</button>
+     <cip-dropdown>
+        <a href="javascript:void(0)">
+            下拉菜单
+            <cip-icon type="more"></cip-icon>
+        </a>
+        <cip-dropdownMenu slot="list">
+            <cip-dropdown-item>驴打滚</cip-dropdown-item>
+            <cip-dropdown-item>炸酱面</cip-dropdown-item>
+            <cip-dropdown-item disabled>豆汁儿</cip-dropdown-item>
+            <cip-dropdown-item>冰糖葫芦</cip-dropdown-item>
+            <cip-dropdown-item divided>北京烤鸭</cip-dropdown-item>
+        </cip-dropdownMenu>
+    </cip-dropdown>
   </div>
 </template>
 <script>
@@ -76,9 +78,10 @@ export default {
     return {
       item: {
         name: '',
-        sex: ''
+        sex: '3-111'
       },
-      act: '1'
+      act: '1',
+      openNames: []
     }
   },
   methods: {
@@ -91,6 +94,12 @@ export default {
     select (key) {
       this.act = key
       console.log(key)
+    },
+    changeOpenNames () {
+      this.openNames = ['3']
+      this.$nextTick(() => {
+        this.$refs.menu.updateOpened()
+      })
     }
   }
 }

@@ -12,9 +12,13 @@ import Menu from './menu'
 import MenuGroup from './menu-group'
 import MenuItem from './menu-item'
 import SubMenu from './sub-menu'
+import Dropdown from './dropdown'
+import DropdownMenu from './dropdown-menu'
+import DropdownItem from './dropdown-item'
 const components = [
   Input, Affix, Avatar, Icon, Card, Tag, Col, Row,
-  Menu, MenuGroup, MenuItem, SubMenu
+  Menu, MenuGroup, MenuItem, SubMenu,
+  Dropdown, DropdownMenu, DropdownItem
 ]
 const install = function (Vue) {
   if (install.installed) return

@@ -117,6 +117,7 @@ export default {
     },
     updateOpened () {
       const items = findComponentsDownward(this, 'CipSubMenu')
+      console.log(items)
       if (items.length) {
         items.forEach(item => {
           if (this.openedNames.indexOf(item.name) > -1) item.opened = true
@@ -137,6 +138,7 @@ export default {
   },
   watch: {
     openNames (names) {
+      console.log(names)
       this.openedNames = names
     },
     activeName (val) {

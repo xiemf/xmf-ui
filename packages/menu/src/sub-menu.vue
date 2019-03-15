@@ -135,8 +135,11 @@ export default {
       return true
     })
     this.$on('on-update-active-name', (status) => {
-      if (findComponentUpward(this, 'CipSubMenu')) this.dispatch('CipSubMenu', 'on-update-active-name', status)
+      if (findComponentUpward(this, 'CipSubMenu')) {
+        this.dispatch('CipSubMenu', 'on-update-active-name', status)
+      }
       if (findComponentsDownward(this, 'CipSubMenu')) {
+        // console.log(this.active)
         findComponentsDownward(this, 'CipSubMenu').forEach(item => {
           item.active = false
         })

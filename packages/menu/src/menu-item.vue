@@ -76,6 +76,7 @@ export default {
   },
   mounted () {
     this.$on('on-update-active-name', (name) => {
+      console.log(name)
       if (this.name === name) {
         this.active = true
         this.dispatch('CipSubMenu', 'on-update-active-name', name)
