@@ -1,4 +1,4 @@
-# xmf-ui
+# cip-ui
 
 ## Project use
 
